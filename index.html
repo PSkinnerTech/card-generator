@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="back">
+    <form>
+      <h3>Please fill-in the form</h3>
+      <label>Full Name</label>
+      <input type="text" id="inName"   placeholder="Your name...">
+      <label>Date of Completion</label>
+      <input type="date" id="inBirth"  placeholder="Date of birth...">
+      <label>Certification</label>
+      <input type="text" id="inField"  placeholder="Web3 Developer">
+      <label>Certification Number</label>
+      <input type="number" id="inNum"  placeholder="0x111111222222">
+      <label for="file" class="upload">Upload an Image</label>
+      <br>
+      <span>Choose one that desrcibes you perfectly</span>
+      <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+    </form>
+      <button type="submit" id="preview">Preview</button>
+
+
+    <div class="container">
+      <canvas id="result" class="card">
+
+        <header id="head">
+          <div class="camp">
+            <h4>Alchemy</h4>
+            <span>University</span>
+          </div>
+          <img src="./img/alchemy-logo.png" id="logo">
+        </header>
+
+        <div class="content">
+          <img src="" id="imgDisplayed">
+          <ul>
+            <li id="name"></li>
+            <li id="birth"></li>
+            <li id="fieldYear"></li>
+            <li>SubN°:<span id="num"></span></li>
+          </ul>
+        </div>
+
+    </canvas>
+    <button id="down">Download</button>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
